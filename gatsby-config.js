@@ -9,12 +9,34 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `MS Prep Football Archive`,
+    description: `MS Prep Football Archive`,
+    author: `Michael R Creel`,
+    siteUrl: `https://gatsbyfootball.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-mongodb',
+      options: {
+        dbName: 'rawData',
+        collection: [
+          'Game', 'School', 'Season'
+        ],
+        server: {
+          address: 'ms-prep-football-archiv.1dbe7gc.mongodb.net',
+          port: 27017
+        },
+        auth: {
+          user: 'michael',
+          password: 'michael_password'
+        },
+        extraParams: {
+          ssl: true,
+          authSource: 'admin',
+          retryWrites: true
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
