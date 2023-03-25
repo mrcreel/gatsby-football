@@ -1,22 +1,23 @@
 import * as React from "react"
 import { Link,graphql } from "gatsby"
 
-
 import Layout from "../components/layout"
+
+import {
+  schoolList,
+  schoolCard
+} from './schools.module.css'
 
 const SchoolsPage = (props) => {
   const schools = props.data.allMongodbRawDataSchool.edges
   return (
     <Layout pageTitle="Schools">
-      <p>Under Construction</p>
       <div>
-        <div className="schoolList">
+        <div className={schoolList} >
         {schools.map(school =>
-            <div className="schoolCard">
-              <Link to={'/school/' + school.node.slug}>
-                <h3>{school.node.name}</h3>
-              </Link>
-            </div>
+          <Link className={schoolCard} to={'/school/' + school.node.slug}>
+            <h3>{school.node.name}</h3>
+          </Link>
         )}
         </div>
       </div>

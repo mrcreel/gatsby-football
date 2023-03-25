@@ -1,0 +1,16 @@
+.school-list {
+  margin: 0 auto;
+  padding-left: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.school-card {
+  width: 325px;
+  flex-grow: 1;
+  font-size: small;
+  height: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
