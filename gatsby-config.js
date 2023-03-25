@@ -23,7 +23,7 @@ module.exports = {
           'Game', 'School', 'Season'
         ],
         server: {
-          address: 'ms-prep-football-archiv.1dbe7gc.mongodb.net',
+          address: 'ac-9x7xkea-shard-00-01.1dbe7gc.mongodb.net',
           port: 27017
         },
         auth: {
@@ -31,6 +31,7 @@ module.exports = {
           password: 'michael_password'
         },
         extraParams: {
+          replicaSet: 'Main-shard-0',
           ssl: true,
           authSource: 'admin',
           retryWrites: true
