@@ -15,7 +15,7 @@ const SchoolsPage = (props) => {
       <div>
         <div className={schoolList} >
         {schools.map(school =>
-          <Link className={schoolCard} to={'/school/' + school.node.slug}>
+          <Link className={schoolCard} to={'/seasons/' + school.node.slug}>
             <h3>{school.node.name}</h3>
           </Link>
         )}

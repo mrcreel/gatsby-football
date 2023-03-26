@@ -8,7 +8,6 @@
 }
 .site-header{
     margin: -1rem;
-    margin-bottom: 0.5rem;
     padding: 10px;
     text-align: left;
     background: gray;
@@ -21,8 +20,18 @@
     text-transform: uppercase;
   }
 .heading{
-    color: rebeccapurple;
-    margin-bottom: 0.75rem;
+    position: relative;
+    color: white;
+    background-color: rebeccapurple;
+    margin-top: -0.125rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: x-large;
+    font-weight: 900;
 }
 .nav-bar{
     padding-left: 1rem;

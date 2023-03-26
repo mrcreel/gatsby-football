@@ -12,7 +12,7 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const {schoolsData} = await graphql(`
+  const {data} = await graphql(`
     {
       schools: allMongodbRawDataSchool{
         edges{
@@ -23,10 +23,10 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  for (const {node} of schoolsData.schools.edges){
+  for (const {node} of data.schools.edges){
     await createPage({
-      path: `/school/${node.slug}`,
-      component: path.resolve('./src/components/school.js'),
+      path: `/seasons/${node.slug}`,
+      component: path.resolve('./src/components/seasons.js'),
       context: {
         slug: node.slug
       },
