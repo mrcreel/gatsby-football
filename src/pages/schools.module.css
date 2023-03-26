@@ -1,16 +1,27 @@
 .school-list {
   margin: 0 auto;
   padding-left: 0.5rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .school-card {
-  width: 325px;
+  width: 300px;
   flex-grow: 1;
-  font-size: small;
+  font-size: x-small;
   height: 1.5rem;
   color: black;
   text-decoration: none;
+}
+.school-card :hover{
+  background-color: rgb(175, 164, 164);
+}
+
+@media (max-width: 650px) {
+  .school-list a{
+    text-align: center;
+  };
 }
